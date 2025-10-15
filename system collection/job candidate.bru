@@ -1,0 +1,26 @@
+meta {
+  name: job candidate
+  type: http
+  seq: 8
+}
+
+post {
+  url: http://127.0.0.1:8000/jobs/candidates/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYwNTQ0NjA5LCJpYXQiOjE3NjA1NDQzMDksImp0aSI6IjczZDg1NWY0OTZhNzQ0YTA5ZGMyYWM0ZGU0MjUxNWYyIiwidXNlcl9pZCI6IjYifQ.6t9rer7FlvIjR3xm9SSJK3UmVaqRnsbZbJOp8t8sjFc
+}
+
+body:json {
+  {
+    "job_position": 4
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

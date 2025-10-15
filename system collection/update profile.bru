@@ -1,0 +1,50 @@
+meta {
+  name: update profile
+  type: http
+  seq: 5
+}
+
+put {
+  url: http://127.0.0.1:8000/accounts/profile/me/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYwNTQzOTgzLCJpYXQiOjE3NjA1NDM2ODMsImp0aSI6IjczYzQ5YTU2Y2M3ODRkYWE5N2I4YmYwMjFmZTkwZGNiIiwidXNlcl9pZCI6IjYifQ.udMb_UYOT5oOn0lb8YU20RkfvHYpTmMrXqKTwhsu6tE
+}
+
+body:json {
+  {
+    "first_name":"Alireza",
+    "last_name":"Salimzadeh",
+    "national_id":"6660174024",
+    "phone_number":"09379288776",
+    "degree":"master",
+    "gpa":"20"
+  }
+  
+  // {
+  //   "first_name":"Taha",
+  //   "last_name":"Nasrollahi",
+  //   "national_id":"0065874523",
+  //   "phone_number":"0935876698",
+  //   "degree":"bachelor",
+  //   "gpa":"18"
+  // }
+  
+  // {
+  //   "first_name":"Ramin",
+  //   "last_name":"Karaj",
+  //   "national_id":"258965470",
+  //   "phone_number":"0938795874",
+  //   "degree":"Front",
+  //   "gpa":"18"
+  // }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

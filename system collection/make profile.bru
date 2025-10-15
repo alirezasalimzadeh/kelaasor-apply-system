@@ -1,0 +1,31 @@
+meta {
+  name: make profile
+  type: http
+  seq: 3
+}
+
+post {
+  url: http://127.0.0.1:8000/accounts/profile/create/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYwNTQzMTcyLCJpYXQiOjE3NjA1NDI4NzIsImp0aSI6ImEwZjIxNGMxNTdjNTQyYWY4ZmI3MWUyZmIzYTBiZjlmIiwidXNlcl9pZCI6IjgifQ.chDpePh70sHFWwl9bAikgDrRYAUoIjiXI4Fp6SmyyX8
+}
+
+body:json {
+  {
+    "first_name":"Ramin",
+    "last_name":"Khoshgel",
+    "national_id":"258965470",
+    "phone_number":"0938795874",
+    "degree":"Front",
+    "gpa":"18"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

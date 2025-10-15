@@ -1,0 +1,20 @@
+meta {
+  name: see profile
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://127.0.0.1:8000/accounts/profile/me/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzYwNTQzMTcyLCJpYXQiOjE3NjA1NDI4NzIsImp0aSI6ImEwZjIxNGMxNTdjNTQyYWY4ZmI3MWUyZmIzYTBiZjlmIiwidXNlcl9pZCI6IjgifQ.chDpePh70sHFWwl9bAikgDrRYAUoIjiXI4Fp6SmyyX8
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
