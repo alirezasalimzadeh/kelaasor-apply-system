@@ -33,6 +33,8 @@ class Candidate(models.Model):
     job_position = models.ForeignKey(JobPosition, on_delete=models.CASCADE)
     registered_at = models.DateTimeField(auto_now_add=True)
 
+    group = models.PositiveSmallIntegerField(null=True, blank=True)
+
     def can_change_position(self):
         return timezone.now() - self.registered_at <= timedelta(hours=24)
 
